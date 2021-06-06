@@ -11,21 +11,40 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'casino' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'casino' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'casino' ), 'casino', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+	<footer class="footer">
+        <h3 class="footer__title">Интернет-казино — это сайт или специальная программа, которые позволяют играть в азартные игры в интернете. Сайты интернет-казино.
+        </h3>
+        <p class="footer__text">
+            На сегодня в ТОП 10 казино онлайн 2021 России и Украины входят только самые лучшие клубы с надежной репутацией, подтвержденной многочисленными отзывами пользователей. Владельцы площадок всеми силами стремятся привлечь внимание игроков, используя в этих целях возможности современной компьютерной графики. Официальный сайт казино онлайн из десятки лучших отличается стильным дизайном и эргономичной структурой, позволяющей быстро ориентироваться на месте. Продуманное меню с простой и удобной навигацией разделяется на несколько разделов. Самую важную информацию легко найти на стартовой странице. Здесь обычно вывешивается рекламный баннер с текущими акциями и размещается часть ассортимента игровых автоматов. В лобби также находятся блоки с актуальными новостями, турнирами, VIP предложениями и бонусами. На видном месте располагаются кнопки для регистрации и входа, а также ссылка на чат для связи с техподдержкой.
+        </p>
+        <div class="footer__bl">
+            <hr class="line">
+            <nav class="big-menu footer__menu">
+                <ul class="big-menu__col">
+                    <li><a href="#">ПМ Казино</a></li>
+                    <li><a href="#">Joker Казино</a></li>
+                    <li><a href="#">First Casino</a></li>
+                </ul>
+                <ul class="big-menu__col">
+                    <li><a href="#">Пинап Казино</a></li>
+                    <li><a href="#">Пари Матч Казино</a></li>
+                    <li><a href="#">Слотоклуб</a></li>
+                </ul>
+                <ul class="big-menu__col">
+                    <li><a href="#">Goxbet</a></li>
+                    <li><a href="#">Riobet</a></li>
+                    <li><a href="#">Космолот</a></li>
+                </ul>
+            </nav>
+            <p class="footer__text">Посещая сайт Sloterman, вы выражаете согласие с условиями предоставления услуг, а также с политикой конфиденциальности. Если вы еще не достигли совершеннолетия или законы вашей страны не позволяют играть в казино, вы не сможете запускать азартные игры, но можете ознакомиться с любой информацией на нашем сайте.</p>
+            <hr class="line">
+        </div>
+        <div class="footer__bl">
+            <span class="footer__left-text">© "TopCasino", 2013-2021</span>
+            <span class="footer__right-text">support@topcasino.com</span>
+        </div>
+
+	</footer>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

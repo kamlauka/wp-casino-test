@@ -19,3 +19,77 @@ casino is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 */
+@font-face {
+  font-family: 'Circe';
+  src: url('Circe-Regular.eot');
+  src: local('Circe'), local('Circe-Regular'),
+  url('Circe-Regular.eot?#iefix') format('embedded-opentype'),
+  url('Circe-Regular.woff') format('woff'),
+  url('Circe-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Circe';
+  src: url('Circe-ExtraLight.eot');
+  src: local('Circe ExtraLight'), local('Circe-ExtraLight'),
+  url('Circe-ExtraLight.eot?#iefix') format('embedded-opentype'),
+  url('Circe-ExtraLight.woff') format('woff'),
+  url('Circe-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Circe';
+  src: url('Circe-Light.eot');
+  src: local('Circe Light'), local('Circe-Light'),
+  url('Circe-Light.eot?#iefix') format('embedded-opentype'),
+  url('Circe-Light.woff') format('woff'),
+  url('Circe-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Circe';
+  src: url('Circe-Bold.eot');
+  src: local('Circe Bold'), local('Circe-Bold'),
+  url('Circe-Bold.eot?#iefix') format('embedded-opentype'),
+  url('Circe-Bold.woff') format('woff'),
+  url('Circe-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Circe';
+  src: url('Circe-ExtraBold.eot');
+  src: local('Circe ExtraBold'), local('Circe-ExtraBold'),
+  url('Circe-ExtraBold.eot?#iefix') format('embedded-opentype'),
+  url('Circe-ExtraBold.woff') format('woff'),
+  url('Circe-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+$grey: rgba(132, 132, 132, 0.5);
+$red: linear-gradient(158.94deg, #FFFFFF -10.12%, rgba(255, 255, 255, 0) 104.75%), linear-gradient(0deg, #822398, #822398), linear-gradient(158.94deg, #FFFFFF -10.12%, rgba(255, 255, 255, 0) 104.75%), #399A60;
+$green-grad: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(0deg, #2BCDCC, #2BCDCC), #434651;
+$green: #2BCDCC;
+$red-light: #EA93F6;
+
+.cnt {
+  max-width: 1200px;
+
+}
+
+.block{
+  background: rgba(132, 132, 132, 0.5);
+  backdrop-filter: blur(40px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 5px;
+
+}

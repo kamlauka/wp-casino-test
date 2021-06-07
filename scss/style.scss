@@ -21,69 +21,112 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 */
 @font-face {
   font-family: 'Circe';
-  src: url('Circe-Regular.eot');
-  src: local('Circe'), local('Circe-Regular'),
-  url('Circe-Regular.eot?#iefix') format('embedded-opentype'),
-  url('Circe-Regular.woff') format('woff'),
-  url('Circe-Regular.ttf') format('truetype');
+  src: url('fonts/Circe-Regular.eot');
+  src: local('fonts/Circe'), local('fonts/Circe-Regular'),
+  url('fonts/Circe-Regular.eot?#iefix') format('embedded-opentype'),
+  url('fonts/Circe-Regular.woff') format('woff'),
+  url('fonts/Circe-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Circe';
-  src: url('Circe-ExtraLight.eot');
-  src: local('Circe ExtraLight'), local('Circe-ExtraLight'),
-  url('Circe-ExtraLight.eot?#iefix') format('embedded-opentype'),
-  url('Circe-ExtraLight.woff') format('woff'),
-  url('Circe-ExtraLight.ttf') format('truetype');
+  src: url('fonts/Circe-ExtraLight.eot');
+  src: local('fonts/Circe ExtraLight'), local('fonts/Circe-ExtraLight'),
+  url('fonts/Circe-ExtraLight.eot?#iefix') format('embedded-opentype'),
+  url('fonts/Circe-ExtraLight.woff') format('woff'),
+  url('fonts/Circe-ExtraLight.ttf') format('truetype');
   font-weight: 200;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Circe';
-  src: url('Circe-Light.eot');
-  src: local('Circe Light'), local('Circe-Light'),
-  url('Circe-Light.eot?#iefix') format('embedded-opentype'),
-  url('Circe-Light.woff') format('woff'),
-  url('Circe-Light.ttf') format('truetype');
+  src: url('fonts/Circe-Light.eot');
+  src: local('fonts/Circe Light'), local('fonts/Circe-Light'),
+  url('fonts/Circe-Light.eot?#iefix') format('embedded-opentype'),
+  url('fonts/Circe-Light.woff') format('woff'),
+  url('fonts/Circe-Light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Circe';
-  src: url('Circe-Bold.eot');
-  src: local('Circe Bold'), local('Circe-Bold'),
-  url('Circe-Bold.eot?#iefix') format('embedded-opentype'),
-  url('Circe-Bold.woff') format('woff'),
-  url('Circe-Bold.ttf') format('truetype');
+  font-family: 'fonts/Circe';
+  src: url('fonts/Circe-Bold.eot');
+  src: local('fonts/Circe Bold'), local('Circe-Bold'),
+  url('fonts/Circe-Bold.eot?#iefix') format('embedded-opentype'),
+  url('fonts/Circe-Bold.woff') format('woff'),
+  url('fonts/Circe-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Circe';
-  src: url('Circe-ExtraBold.eot');
-  src: local('Circe ExtraBold'), local('Circe-ExtraBold'),
-  url('Circe-ExtraBold.eot?#iefix') format('embedded-opentype'),
-  url('Circe-ExtraBold.woff') format('woff'),
-  url('Circe-ExtraBold.ttf') format('truetype');
+  font-family: 'fonts/Circe';
+  src: url('fonts/Circe-ExtraBold.eot');
+  src: local('fonts/Circe ExtraBold'), local('fonts/Circe-ExtraBold'),
+  url('fonts/Circe-ExtraBold.eot?#iefix') format('embedded-opentype'),
+  url('fonts/Circe-ExtraBold.woff') format('woff'),
+  url('fonts/Circe-ExtraBold.ttf') format('truetype');
   font-weight: 800;
   font-style: normal;
 }
 
-$grey: rgba(132, 132, 132, 0.5);
-$red: linear-gradient(158.94deg, #FFFFFF -10.12%, rgba(255, 255, 255, 0) 104.75%), linear-gradient(0deg, #822398, #822398), linear-gradient(158.94deg, #FFFFFF -10.12%, rgba(255, 255, 255, 0) 104.75%), #399A60;
-$green-grad: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(0deg, #2BCDCC, #2BCDCC), #434651;
-$green: #2BCDCC;
-$red-light: #EA93F6;
+$grey-trans: rgba(132, 132, 132, 0.5);
+$grey: #bcbcbc;
+$purple-grad: linear-gradient(158.94deg, #FFFFFF -10.12%, rgba(255, 255, 255, 0) 104.75%), linear-gradient(0deg, #822398, #822398), linear-gradient(158.94deg, #FFFFFF -10.12%, rgba(255, 255, 255, 0) 104.75%), #399A60;
+$blue-grad: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(0deg, #2BCDCC, #2BCDCC), #434651;
+$blue: #2BCDCC;
+$purple: #EA93F6;
 
-.cnt {
+@mixin purple-text {
+  color: $purple;
+}
+
+@mixin grey-text {
+  color: $grey;
+}
+
+
+* {
+  font-family: Circe;
+  font-size: 16px;
+  color: white;
+}
+
+body {
+  margin: 0;
+  background: #000;
+}
+
+.site {
   max-width: 1200px;
+  width: 83.333%;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    width: auto;
+    margin: 0 15px;
+
+  }
+}
+
+.mob-hide {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+/*header*/
+
+.header {
+  display: flex;
 
 }
+
+/*header end*/
 
 .block{
   background: rgba(132, 132, 132, 0.5);
@@ -92,4 +135,105 @@ $red-light: #EA93F6;
 
   border-radius: 5px;
 
+}
+
+.purple-text{
+  @include purple-text;
+}
+
+.link-purple-hover {
+  text-decoration: none;
+  transition: all 500ms ease;
+
+  &:visited {
+    text-decoration: none;
+    color:white;
+  }
+  &:active {
+    text-decoration: none;
+  }
+  &:hover {
+    @include purple-text;
+  }
+}
+
+/*footer*/
+.big-menu {
+  display: flex;
+  justify-content: space-between;
+  &__col {
+    margin: 0;
+    padding-left: 0;
+    & li {
+      list-style-type: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 25px;
+  }
+}
+
+.footer-block{
+  display: flex;
+  justify-content: space-between;
+  margin: 43px 0;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    margin: 30px 0;
+
+    &_right-mob {
+      justify-content: right;
+    }
+  }
+}
+
+.footer {
+  &__info {
+    width: 75%;
+    margin: 60px 0;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      margin: 30px 0;
+    }
+  }
+  &__text {
+    font-size: 16px;
+  }
+  &__title {
+    width: 90%;
+    font-size: 24px;
+    @include purple-text;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+  &__menu {
+    flex: 1 1 40%;
+    margin-right: 8vw;
+
+    @media (max-width: 768px) {
+      margin-right: 4vw;
+    }
+  }
+
+  &__text-mini {
+    flex: 1 1 48%;
+    margin: 0 3vw 0 0;
+
+  }
+}
+/*footer end*/
+
+
+
+.grey-text {
+  @include grey-text;
+}
+
+.mini-text {
+  font-size: 12px;
 }

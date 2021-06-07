@@ -20,15 +20,27 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
+	<header class="header">
+        <div class="header__logo">
+            <a href="/">Logotype</a>
+        </div>
 
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-
+		<nav class="header__navigation">
+            <ul>
+                <li>About</li>
+                <li>How it works</li>
+                <li>Casino</li>
+                <li>Contacts</li>
+            </ul>
 		</nav><!-- #site-navigation -->
+        <div class="header__lang"><a href="#">KZ</a>
+            <ul>
+                <li><a href="#">Themes</a></li>
+                <li><a href="#">Plugins</a></li>
+                <li><a href="#">Tutorials</a></li>
+            </ul>
+        </div>
 	</header><!-- #masthead -->

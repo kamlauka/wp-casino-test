@@ -8,56 +8,20 @@
  */
 
 ?>
-
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
-
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
-				<?php
-				casino_posted_on();
-				casino_posted_by();
-				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
-
-	<?php casino_post_thumbnail(); ?>
-
-	<div class="entry-content">
-		<?php
-		the_content(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'casino' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				wp_kses_post( get_the_title() )
-			)
-		);
-
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'casino' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php casino_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+<div class="list__block block" id="post-<?php the_ID(); ?>">
+    <div class="img-block block__image">
+        <?php casino_post_thumbnail(); ?>
+    </div>
+    <div class="block__descr">
+        <h2 class="block__title title-block">
+        <?php $post_id = get_the_ID();
+        echo get_post_meta($post_id, 'title', true); ?></h2>
+            <p class="block__text"><?php echo get_post_meta( $post_id, 'description', true); ?></p>
+        <button class="btn-mini block__btn_mini">★ Бонус<span class="btn-mini__dark-text"><?php echo get_post_meta( $post_id, 'bonus', true); ?></span></button>
+    </div>
+    <div class="block__btns">
+        <a href="<?php echo get_post_meta( $post_id, 'entry', true); ?>" class="block__link-btn"><button class="btn btn_purple block__btn-purple">Вход</button></a>
+        <a href="<?php echo get_post_meta( $post_id, 'link_bonus', true); ?>" class="block__link-btn"><button class="btn btn_blue block__btn-blue">Получить бонус</button></a>
+    </div>
+</div>
+<?php //casino_entry_footer(); ?>

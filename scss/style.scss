@@ -76,9 +76,11 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 $grey-trans: rgba(132, 132, 132, 0.5);
 $grey: #bcbcbc;
-$purple-grad: linear-gradient(158.94deg, #FFFFFF -10.12%, rgba(255, 255, 255, 0) 104.75%), linear-gradient(0deg, #822398, #822398), linear-gradient(158.94deg, #FFFFFF -10.12%, rgba(255, 255, 255, 0) 104.75%), #399A60;
+$grey-dark: #171717;
+$purple-grad: linear-gradient(168deg, rgba(238,65,241,1) 33%, rgba(139,38,159,1) 100%), #822398;
 $blue-grad: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(0deg, #2BCDCC, #2BCDCC), #434651;
 $blue: #2BCDCC;
+$blue-dark: #096160;
 $purple: #EA93F6;
 
 @mixin purple-text {
@@ -87,6 +89,14 @@ $purple: #EA93F6;
 
 @mixin grey-text {
   color: $grey;
+}
+
+@mixin btn-style {
+  border: 1px solid $purple;
+  border-radius: 5px;
+  color: $purple;
+  backdrop-filter: blur(40px);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 
@@ -113,49 +123,257 @@ body {
   }
 }
 
-.mob-hide {
-  @media (max-width: 768px) {
-    display: none;
-  }
-}
+
 
 /*header*/
 
 .header {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.logo {
+  flex: 1;
+}
+
+.logo__name {
+  font-style: normal;
+  font-weight:  bold;
+  font-size: 20px;
 
 }
+
+.navigation {
+  flex: 4.4;
+
+  @media (max-width: 810px) {
+    display: none;
+  }
+}
+
+.main-navigation{
+  display: flex;
+  &__item {
+    margin: 10px;
+  }
+}
+
+.item-nav{
+  padding: 6px 16px;
+  border: 1px solid transparent;
+  list-style-type: none;
+  font-size: 16px;
+  font-weight:  bold;
+  &:first-child {
+    @include btn-style;
+  }
+
+  &:hover {
+    @include btn-style;
+  }
+}
+
+.lang {
+  flex: 0.48;
+  position: relative;
+  padding: 6px 16px;
+  @include btn-style;
+  &__menu {
+    display: none;
+    position: absolute;
+  }
+
+  &:hover > &__menu {
+    display:inherit;
+  }
+}
+
+.lang-menu {
+  padding: 0;
+  &__item {
+    min-width:170px;
+    float:none;
+    list-style-type: none;
+    position: relative;
+    background: $purple;
+  }
+}
+
 
 /*header end*/
 
-.block{
-  background: rgba(132, 132, 132, 0.5);
-  backdrop-filter: blur(40px);
-  /* Note: backdrop-filter has minimal browser support */
+/*main*/
+.title {
+  padding: 20px 0;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 59px;
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
+}
+.main {
+  &__btn-load {
+    margin-top: 32px;
 
+    @media (max-width: 768px) {
+      margin-top: 14px;
+    }
+  }
+}
+
+.block{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 28px;
+  margin: 17px 0;
+  background: $grey-trans;
+  backdrop-filter: blur(40px);
+  /* Note: backdrop-filter has minimal browser support , but it maybe realized https://overcoder.net/q/3574006/%D1%81%D0%B2%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%BE-css-blur-%D1%82%D0%BE%D0%BB%D1%8C%D0%BA%D0%BE-%D0%B4%D0%BB%D1%8F-background-image*/
   border-radius: 5px;
 
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  &__btns {
+    display: flex;
+    flex-direction: column;
+    flex: 1.8;
+
+    &:nth-child(2) {
+      margin-top: 16px;
+      @media (max-width: 768px) {
+
+        margin-top: 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: row;
+      flex: auto;
+      width: 100%;
+      margin-top: 14px;
+    }
+  }
+
+  &__link-btn {
+    @media (max-width: 1164px) {
+      flex: 2.5
+    }
+
+    @media (max-width: 768px) {
+      flex: 2;
+    }
+
+    &:nth-child(2) {
+      margin-top: 16px;
+
+      @media (max-width: 768px) {
+        flex: 3;
+        margin-top: 0;
+        margin-left: 12px;
+      }
+    }
+  }
+
+  &__title {
+    margin: 0;
+    @media (max-width: 768px) {
+      margin-top: 20px;
+    }
+  }
+
+  &__descr {
+    flex: 5;
+  }
+
+  &__btn_mini {
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  &__text {
+    width: 80%;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+}
+.title-block {
+  font-size: 28px;
+  font-weight:  bold;
+  line-height: 1em;
 }
 
-.purple-text{
-  @include purple-text;
+.img-block {
+  flex: 1.5;
+  height: 190px;
+  margin-right: 28px;
+  border-radius: 5px;
+  background: $grey-dark;
+
+  @media (max-width: 768px) {
+    flex: auto;
+    width: 100%;
+    margin-right: 0;
+  }
 }
 
-.link-purple-hover {
-  text-decoration: none;
-  transition: all 500ms ease;
+.post-thumbnail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
 
-  &:visited {
-    text-decoration: none;
-    color:white;
+.btn {
+  padding: 25px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight:  bold;
+  cursor: pointer!important;
+
+  @media (max-width: 768px) {
+    padding: 10px 12px;
   }
-  &:active {
-    text-decoration: none;
+
+  &_purple {
+    background: $purple-grad;
   }
-  &:hover {
-    @include purple-text;
+
+  &_blue {
+    background: $blue-grad;
   }
 }
+
+
+
+.btn-mini {
+  padding: 10px 12px;
+  border: none;
+  border-radius: 5px;
+  background: $blue;
+  //font-size: 12px;
+
+  &__dark-text {
+    padding-left: 8px;
+    color: $blue-dark;
+    //font-size: 12px;
+  }
+}
+
+/*main end*/
+
+
 
 /*footer*/
 .big-menu {
@@ -203,7 +421,7 @@ body {
     font-size: 16px;
   }
   &__title {
-    width: 90%;
+    width: 95%;
     font-size: 24px;
     @include purple-text;
 
@@ -229,11 +447,50 @@ body {
 /*footer end*/
 
 
-
 .grey-text {
   @include grey-text;
 }
 
+.purple-text{
+  @include purple-text;
+}
+
+.link-purple-hover{
+  &:hover {
+    @include purple-text;
+  }
+}
+
+.link {
+  text-decoration: none;
+  transition: all 500ms ease;
+
+  &:visited {
+    text-decoration: none;
+    color:white;
+  }
+  &:active {
+    text-decoration: none;
+  }
+}
+
 .mini-text {
   font-size: 12px;
+}
+
+.btn-purple-trans {
+  position: relative;
+  padding: 16px 22px 16px 46px;
+  border: 1px solid $purple;
+  border-radius: 5px;
+  background-color: transparent;
+  background-image: url("img/vector.svg");
+  background-position: 22px center;
+  background-repeat: no-repeat;
+}
+
+.mob-hide {
+  @media (max-width: 768px) {
+    display: none;
+  }
 }

@@ -24,23 +24,25 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<header class="header">
-        <div class="header__logo">
-            <a href="/">Logotype</a>
+        <div class="header__logo logo">
+            <a class="link logo__name" href="#">Logotype</a>
         </div>
 
-		<nav class="header__navigation">
-            <ul>
-                <li>About</li>
-                <li>How it works</li>
-                <li>Casino</li>
-                <li>Contacts</li>
+		<nav class="navigation">
+            <ul class="main-navigation">
+                <li class="link item-nav main-navigation__item">About</li>
+                <li class="link item-nav main-navigation__item">How it works</li>
+                <li class="link item-nav main-navigation__item">Casino</li>
+                <li class="link item-nav main-navigation__item">Contacts</li>
             </ul>
 		</nav><!-- #site-navigation -->
-        <div class="header__lang"><a href="#">KZ</a>
-            <ul>
-                <li><a href="#">Themes</a></li>
-                <li><a href="#">Plugins</a></li>
-                <li><a href="#">Tutorials</a></li>
-            </ul>
+        <div class="header__lang">
+            <div class="lang" href="#">KZ
+                <ul class="lang-menu lang__menu">
+                    <li class="lang-menu__item"><a href="#" class="link">KZ</a></li>
+                    <li class="lang-menu__item"><a href="#" class="link">RU</a></li>
+                </ul>
+            </div>
+
         </div>
 	</header><!-- #masthead -->

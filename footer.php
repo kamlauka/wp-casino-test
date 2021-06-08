@@ -21,19 +21,19 @@
         <div class="footer-block">
             <nav class="big-menu footer__menu">
                 <ul class="big-menu__col">
-                    <li><a class="grey-text link-purple-hover" href="#">ПМ Казино</a></li>
-                    <li><a class="grey-text link-purple-hover" href="#">Joker Казино</a></li>
-                    <li><a class="grey-text link-purple-hover" href="#">First Casino</a></li>
+                    <li><a class="link grey-text link-purple-hover" href="#">ПМ Казино</a></li>
+                    <li><a class="link grey-text link-purple-hover" href="#">Joker Казино</a></li>
+                    <li><a class="link grey-text link-purple-hover" href="#">First Casino</a></li>
                 </ul>
                 <ul class="big-menu__col">
-                    <li><a class="grey-text link-purple-hover" href="#">Пинап Казино</a></li>
-                    <li><a class="grey-text link-purple-hover" href="#">Пари Матч Казино</a></li>
-                    <li><a class="grey-text link-purple-hover" href="#">Слотоклуб</a></li>
+                    <li><a class="link grey-text link-purple-hover" href="#">Пинап Казино</a></li>
+                    <li><a class="link grey-text link-purple-hover" href="#">Пари Матч Казино</a></li>
+                    <li><a class="link grey-text link-purple-hover" href="#">Слотоклуб</a></li>
                 </ul>
                 <ul class="big-menu__col">
-                    <li><a class="grey-text link-purple-hover" href="#">Goxbet</a></li>
-                    <li><a class="grey-text link-purple-hover" href="#">Riobet</a></li>
-                    <li><a class="grey-text link-purple-hover" href="#">Космолот</a></li>
+                    <li><a class="link grey-text link-purple-hover" href="#">Goxbet</a></li>
+                    <li><a class="link grey-text link-purple-hover" href="#">Riobet</a></li>
+                    <li><a class="link grey-text link-purple-hover" href="#">Космолот</a></li>
                 </ul>
             </nav>
             <p class="grey-text mini-text footer__text-mini">Посещая сайт Sloterman, вы выражаете согласие с условиями предоставления услуг, а также с политикой конфиденциальности. Если вы еще не достигли совершеннолетия или законы вашей страны не позволяют играть в казино, вы не сможете запускать азартные игры, но можете ознакомиться с любой информацией на нашем сайте.</p>

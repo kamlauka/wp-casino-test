@@ -95,7 +95,7 @@ $purple: #EA93F6;
   border: 1px solid $purple;
   border-radius: 5px;
   color: $purple;
-  backdrop-filter: blur(40px);
+  backdrop-filter: blur(10px);
   background: rgba(0, 0, 0, 0.5);
 }
 
@@ -108,7 +108,18 @@ $purple: #EA93F6;
 
 body {
   margin: 0;
-  background: #000;
+
+  background: url('img/SuperToroid-Purple-Glossy.png') 23% 0% no-repeat,
+  url('img/SuperToroid-Iridescent.png') 85% -5% no-repeat,
+  url('img/RoundCube-Purple-Glossy (1).png') 0 50% no-repeat,
+  url('img/RoundCube-Purple-Glossy.png') 57% 4% no-repeat,
+  url('img/Pill-Purple-Glossy.png') 70% 54% no-repeat,
+  url('img/Cone-Iridescent.png') 29% 17% no-repeat,
+  url('img/RoundCube-Iridescent.svg') 96% 73% no-repeat,
+  url("img/image 5.png") 100% 85% no-repeat,
+  url('img/image 4.png') top left no-repeat;
+  background-color: #000;
+  background-size: 9%, 23%, 12%, 14%, 10%, 15%, 20%, 44%, 52%;
 }
 
 .site {
@@ -126,6 +137,29 @@ body {
 
 
 /*header*/
+.mobile-menu {
+  display: inline-block;
+  cursor: pointer;
+  & * {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  &__bar1.change {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+  }
+  &__bar2.change {
+    opacity: 0;
+  }
+  &__bar3.change{
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+  }
+}
 
 .header {
   display: flex;
@@ -206,7 +240,7 @@ body {
 
 /*main*/
 .title {
-  padding: 20px 0;
+  //padding: 20px 0;
   font-style: normal;
   font-weight: bold;
   font-size: 40px;
@@ -341,6 +375,7 @@ body {
   font-size: 20px;
   font-weight:  bold;
   cursor: pointer!important;
+  transition: all 500ms ease;
 
   @media (max-width: 768px) {
     padding: 10px 12px;
@@ -348,6 +383,14 @@ body {
 
   &_purple {
     background: $purple-grad;
+    background-position: 0 0px;
+    transition: all 500ms ease;
+
+    &:hover {
+      background-position: 0 -30px;
+      background-size: 120%;
+      //background: linear-gradient(7deg, #ee41f1 10%, #8b269f 100%), #811398;
+    }
   }
 
   &_blue {
@@ -362,12 +405,21 @@ body {
   border: none;
   border-radius: 5px;
   background: $blue;
+  transition: all 500ms ease;
   //font-size: 12px;
+
+  &:hover {
+    background: #1d8887;
+    & .btn-mini__dark-text {
+      color: white;
+    }
+
+  }
 
   &__dark-text {
     padding-left: 8px;
     color: $blue-dark;
-    //font-size: 12px;
+    transition: all 500ms ease;
   }
 }
 
@@ -463,6 +515,7 @@ body {
 
 .link {
   text-decoration: none;
+  cursor: pointer;
   transition: all 500ms ease;
 
   &:visited {

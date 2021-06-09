@@ -24,6 +24,11 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<header class="header">
+        <div class="mobile-menu" onclick="mobMenu(this)">
+            <div class="mobile-menu__bar1"></div>
+            <div class="mobile-menu__bar2"></div>
+            <div class="mobile-menu__bar3"></div>
+        </div>
         <div class="header__logo logo">
             <a class="link logo__name" href="#">Logotype</a>
         </div>

@@ -5,7 +5,7 @@ get_header();
 ?>
 
 	<main class="main">
-        <div class="breadcrumbs"></div>
+        <div class="breadcrumbs"><span>mainpage</span><span>top online casino</span></div>
         <h1 class="title">ТОП 10казино онлайн 2021</h1>
         <div class="list">
             <?php

@@ -45,6 +45,11 @@
         </div>
 
 	</footer>
+    <script>
+        function mobMenu(x) {
+            x.classList.toggle("change");
+        }
+    </script>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
